@@ -7,14 +7,16 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
+
 #Workflow can read repository code
 permissions:
   contents: read
 
+#Creates a Linux virtual machine
 jobs:
   build:
-
-    runs-on: ubuntu-latest
+    
+    runs-on: ubuntu-latest   #Downloads your repository code into the runner
 
     steps:
     - uses: actions/checkout@v4
